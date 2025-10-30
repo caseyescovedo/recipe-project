@@ -1,16 +1,16 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { Blog } from './pages/Blog.jsx'
-import { Signup } from './pages/Signup.jsx'
-import { Login } from './pages/Login.jsx'
-import { AuthContextProvider } from './contexts/AuthContext.jsx'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Recipe } from './pages/Recipe.jsx';
+import { Signup } from './pages/Signup.jsx';
+import { Login } from './pages/Login.jsx';
+import { AuthContextProvider } from './contexts/AuthContext.jsx';
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Blog />,
+    element: <Recipe />,
   },
   {
     path: '/signup',
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     path: '/login',
     element: <Login />,
   },
-])
+]);
 
 export function App() {
   return (
@@ -29,5 +29,5 @@ export function App() {
         <RouterProvider router={router} />
       </AuthContextProvider>
     </QueryClientProvider>
-  )
+  );
 }

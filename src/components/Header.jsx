@@ -17,6 +17,12 @@ export function Header() {
         >
           Logout
         </button>
+        <Link
+          to="/dashboard"
+          className="ml-4 text-blue-600 underline hover:text-blue-800"
+        >
+          Dashboard
+        </Link>
       </div>
     );
   }
